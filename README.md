@@ -1,7 +1,8 @@
-# cliente_mysql
-O Projeto Cliente_Mysql é um sistema Full-Stack projetado para gerenciar informações de cadastro de clientese realizando o CRUD de Clientes. O design prioriza a simplicidade, eficiência e clareza na separação de responsabilidades entre o Backend (API) e o Frontend (Interface do Usuário).
+# cadastrocliente_mysql
+O Projeto CadastroCliente_Mysql é um sistema Full-Stack projetado para gerenciar informações de cadastro de clientese realizando o CRUD de Clientes. O design prioriza a simplicidade, eficiência e clareza na separação de responsabilidades entre o Backend (API) e o Frontend (Interface do Usuário).
 🚀 Projeto CRUD de Clientes (Full-Stack)Este projeto implementa um sistema básico de Cadastro, Leitura, Atualização e Exclusão (CRUD) para clientes. Utiliza uma arquitetura Full-Stack simples, combinando um Backend robusto em Python (Flask) e um Frontend leve em HTML/JavaScript.🛠️ Tecnologias Utilizadas|| Camada | Tecnologia | Finalidade || Backend (API) | Python 3.x | Linguagem principal. ||  | Flask | Micro-framework para o servidor REST. ||  | Flask-Smorest | Geração automática da documentação Swagger/OpenAPI. ||  | Flask-SQLAlchemy | ORM para manipulação do banco de dados. || Banco de Dados | MySQL | Persistência e armazenamento de dados. || Frontend (UI) | HTML, CSS Puro, JS (Vanilla) | Interface de usuário e comunicação com a API via fetch. |
-⚙️ Estrutura do ProjetoA organização dos arquivos segue o padrão de separação de responsabilidades:/projeto_clientes/
+⚙️ Estrutura do ProjetoA organização dos arquivos segue o padrão de separação de responsabilidades:
+/projeto_clientes/
 |-- app.py             # Lógica do Backend, Rotas (API) e Modelagem.
 |-- config.py          # Configurações do Flask e String de Conexão com o DB.
 |-- requirements.txt   # Lista de dependências Python.
@@ -15,8 +16,10 @@ class Config:
     # ... demais configurações ...
 2. Instalação das DependênciasAbra o terminal na pasta raiz do projeto:# 1. (Opcional) Crie e ative um ambiente virtual
 python -m venv venv
-# Windows: venv\Scripts\activate
-# Linux/macOS: source venv/bin/activate
+# Windows: 
+## venv\Scripts\activate
+# Linux/macOS: 
+## source venv/bin/activate
 # 2. Instale todas as bibliotecas necessárias
 pip install -r requirements.txt
 # 3. InicializaçãoExecute o script principal do Flask.  
