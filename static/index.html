@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD de Clientes (Flask + MySQL)</title>
+    <style>
+    /* ---------- ESTILO GLOBAL ---------- */
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 25px;
+        color: #333;
+    }
+
+    h1, h2 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    /* ---------- MENSAGENS ---------- */
+    #message {
+        color: #0a7c0a;
+        font-weight: bold;
+        margin-bottom: 15px;
+        padding: 10px;
+        background: #e8ffe8;
+        border-left: 5px solid #0a7c0a;
+        display: inline-block;
+        border-radius: 4px;
+    }
+
+    /* ----------- FORMULÁRIO ---------- */
+    form {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #dcdcdc;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+    }
+
+    form label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+
+    form input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cbd3df;
+        border-radius: 5px;
+        margin-top: 5px;
+        font-size: 14px;
+        transition: 0.2s;
+    }
+
+    form input:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 4px rgba(52,152,219,0.5);
+        outline: none;
+    }
+
+    /* Botões do formulário */
+    form button {
+        padding: 10px 18px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #fff;
+        background-color: #3498db;
+        transition: 0.2s;
+    }
+
+    form button:hover {
+        background-color: #217dbb;
+    }
+
+    form button:nth-child(2) {
+        background-color: #7f8c8d;
+        margin-left: 10px;
+    }
+
+    form button:nth-child(2):hover {
+        background-color: #636e72;
+    }
+
+    /* ---------- TABELA ---------- */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    th {
+        background: #2c3e50;
+        color: white;
+        padding: 12px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+    }
+
+    tr:hover td {
+        background: #f2f7ff;
+    }
+
+    /* ---------- BOTÕES NA TABELA ---------- */
+    table button {
+        padding: 6px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 13px;
+        margin-right: 5px;
+        transition: 0.2s;
+    }
+
+    table button:first-child {
+        background-color: #f1c40f;
+    }
+
+    table button:first-child:hover {
+        background-color: #d4a80c;
+    }
+
+    table button:last-child {
+        background-color: #e74c3c;
+    }
+
+    table button:last-child:hover {
+        background-color: #c0392b;
+    }
+</style>
+
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    
+    <div id="message"></div>
+
+    <form id="clientForm">
+        <input type="hidden" id="clientId">
+        Nome: <input type="text" id="nome" required><br><br>
+        CPF: <input type="text" id="cpf" required><br><br>
+        Email: <input type="email" id="email"><br><br>
+        Telefone: <input type="text" id="telefone"><br><br>
+        Endereço: <input type="text" id="endereco"><br><br>
+        <button type="submit">Salvar Cliente</button>
+        <button type="button" onclick="resetForm()">Limpar</button>
+    </form>
+
+    <h2>Clientes Cadastrados</h2>
+    <table id="clientTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+
+    <script src="/static/script.js"></script>
+</body>
+</html> 
