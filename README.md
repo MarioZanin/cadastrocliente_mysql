@@ -21,7 +21,7 @@ python -m venv venv
 # Linux/macOS: 
 ## source venv/bin/activate
 # 2. Instale todas as bibliotecas necessárias
-pip install -r requirements.txt
+## pip install -r requirements.txt
 # 3. InicializaçãoExecute o script principal do Flask.  
 As tabelas do banco de dados serão criadas automaticamente (db.create_all()):python app.py
 O servidor estará ativo em http://127.0.0.1:5000/.
